@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Header } from './components/Header'
+import { Login } from './components/Login'
+import { Registration } from './components/Registration'
+import { Map } from './components/Map'
+import { Profile } from './components/Profile'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+
+  state = { currentPage: "home" }
+
+  navigateTo = (page) => {
+    this.setState({ currentPage: page })
+  }
+
+  render() {
+    return (
+      <>
+        <div className="wrapper">
+          <Header navigate={this.navigateTo} />
+          <main>
+            <section>
+              <div className="section-wrap">
+                {this.state.currentPage === "home" && <Login />}
+                {this.state.currentPage === "registration" && <Registration />}
+                {this.state.currentPage === "map" && <Map />}
+                {this.state.currentPage === "profile" && <Profile />}
+              </div>
+            </section>
+          </main>
+        </div>
+      </>
+    )
+  }
+
 }
 
 export default App;

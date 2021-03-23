@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* layout */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.tabel {
+    border-collapse: collapse;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input {
+    outline: none;
+}
+
+/* components */
+
+/* header */
+.header {
+  display: flex;
+  background: #1C1A19;
+  color: #fff;
+  padding: 21px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item {
+  margin-right: 25px;
+}
+
+.navigation__item:last-child {
+  margin-right: 0;
+}
+
+.navigation__btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.navigation__btn:hover {
+  color: #FDBF5A;
+}
+
+.map {
+  width: 100vw;
+}
+
+.section-wrap {
+  background: url("../assets/images/map.png") center center / cover no-repeat; 
+  height: 100vh;
+  width: 100vw;
+}
+
+/* registration */
+
+.logo-content {
+  display: flex;
+}
+
+.active-area {
+  position: relative;
+  width: 100%;
+}
+
+.logo-area {
+  height: 100vh;
+  display: flex;
+  background: #1C1A19;;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.form {
+  padding: 56px 114px;
+  display: inline-flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.form__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 57px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.row__label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.row__input {
+  border: none;
+  border-bottom: 2px solid #E4E4E4;
+  padding: 10px 10px 10px 0;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+}
+
+.password-check {
+  font-size: 16px;
+  line-height: 19px;
+  color: #828282;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 46px;
+}
+
+.btn {
+  background: #FDBF5A;
+  border-radius: 70px;
+  padding: 16px 141px;
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 33px;
+}
+
+.form__extra {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.form__extra-text {
+  color: #828282;
+}
+
+.registration {
+  cursor: pointer;
+  color: #FDBF5A;
+}
+
