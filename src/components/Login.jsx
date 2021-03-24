@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../assets/logo.svg'
 import { Input } from './Input'
 
-export const Login = () => {
+export const Login = ({ navigate }) => {
     return (
         <div className="logo-content">
             <div className="logo-area">
@@ -14,10 +14,10 @@ export const Login = () => {
                     <Input name="row__label-email" label="Email" type="email" placeholder="mail@mail.ru" />
                     <Input name="row__label-password" label="Пароль" type="password" placeholder="*************" />
                     <span className="password-check">Забыли пароль?</span>
-                    <button type="submit" className="btn">Войти</button>
+                    <button type="submit" className="btn" onClick={() => { navigate("map") }}>Войти</button>
                     <div className="form__extra">
                         <span className="form__extra-text">Новый пользователь?</span>
-                        <span className="registration">Регистрация</span>
+                        <span className="registration" onClick={() => { navigate("registration") }}>Регистрация</span>
                     </div>
                 </form>
             </div>

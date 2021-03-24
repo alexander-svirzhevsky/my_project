@@ -22,8 +22,8 @@ class App extends React.Component {
           <main>
             <section>
               <div className="section-wrap">
-                {this.state.currentPage === "home" && <Login />}
-                {this.state.currentPage === "registration" && <Registration />}
+                {this.state.currentPage === "home" && <Login navigate={this.navigateTo} />}
+                {this.state.currentPage === "registration" && <Registration navigate={this.navigateTo} />}
                 {this.state.currentPage === "map" && <Map />}
                 {this.state.currentPage === "profile" && <Profile />}
               </div>
