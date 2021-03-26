@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Logo from '../assets/logo.svg'
 import { Input } from './Input'
 
@@ -23,4 +24,8 @@ export const Login = ({ navigate }) => {
             </div>
         </div>
     )
+}
+
+Login.propTypes = {
+    navigate: PropTypes.func.isRequired
 }

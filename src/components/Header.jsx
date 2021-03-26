@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Logo from '../assets/header-logo.svg'
 
 export const Header = ({ navigate }) => {
@@ -14,10 +15,14 @@ export const Header = ({ navigate }) => {
                         <button className="navigation__btn" onClick={() => { navigate("profile") }}>Профиль</button>
                     </li>
                     <li className="navigation__item">
-                        <button className="navigation__btn" onClick={() => { navigate("login") }}>Выйти</button>
+                        <button className="navigation__btn" onClick={() => { navigate("home") }}>Выйти</button>
                     </li>
                 </ul>
             </nav>
         </header>
     )
+}
+
+Header.propTypes = {
+    navigate: PropTypes.func.isRequired
 }
